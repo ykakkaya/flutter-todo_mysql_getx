@@ -8,6 +8,6 @@ class IndexPage extends GetWidget<NoteController> {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const Scaffold();
   }
 }
