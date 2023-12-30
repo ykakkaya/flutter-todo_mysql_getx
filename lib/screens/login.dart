@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:todo_mysql/controller/login_controller.dart';
 import 'package:todo_mysql/project_settings/project_colors.dart';
 import 'package:todo_mysql/project_settings/project_text.dart';
+import 'package:todo_mysql/screens/register.dart';
 
 class LoginPage extends GetWidget<LoginController> {
   static const String routeName = "/login";
@@ -27,7 +28,9 @@ class LoginPage extends GetWidget<LoginController> {
               SizedBox(height: Get.size.height * 0.03),
               InkWell(
                 child: _registerText(),
-                onTap: () {},
+                onTap: () {
+                  Get.toNamed(RegisterPage.routeName);
+                },
               )
             ],
           ),
