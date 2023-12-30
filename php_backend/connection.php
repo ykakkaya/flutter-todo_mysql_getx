@@ -12,11 +12,12 @@ class Connection{
         try 
         {
             $connection = new PDO("mysql:host=$this->host;dbname=$this->db", $this->username, $this->password);
-          
+            echo "Connection established successfully";
             return $connection;
 
             
         } catch (PDOException $e) {
+            echo "Connection failed: ". $e->getMessage();
             return $e->getMessage();
         }
     }
