@@ -18,12 +18,10 @@ class RegisterPage extends GetWidget<RegisterController> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 ClipRRect(
-                  borderRadius: BorderRadius.circular(
-                      20.0), // Ovalleştirme için radius değeri
+                  borderRadius: BorderRadius.circular(20.0), // Ovalleştirme için radius değeri
                   child: Image.asset(
                     "assets/images/register.jpg",
-                    fit: BoxFit
-                        .cover, // Resmi container'a sığdırmak için uygun ölçekte ayarlama
+                    fit: BoxFit.cover, // Resmi container'a sığdırmak için uygun ölçekte ayarlama
                   ),
                 ),
                 SizedBox(height: Get.size.height * 0.03),
@@ -33,10 +31,9 @@ class RegisterPage extends GetWidget<RegisterController> {
                 SizedBox(height: Get.size.height * 0.03),
                 _registerPasswordTextField(ProjectText.registerPasswordText),
                 SizedBox(height: Get.size.height * 0.03),
-                _registerRePasswordTextField(
-                    ProjectText.registerRePasswordText),
+                _registerRePasswordTextField(ProjectText.registerRePasswordText),
                 SizedBox(height: Get.size.height * 0.03),
-                _buildRegisterButton(),
+                _buildRegisterButton()
               ],
             ),
           ),
@@ -84,6 +81,7 @@ class RegisterPage extends GetWidget<RegisterController> {
         child: TextField(
           controller: controller.mailController,
           textInputAction: TextInputAction.next,
+          keyboardType: TextInputType.emailAddress,
           decoration: InputDecoration(
             border: InputBorder.none,
             label: Text(text),
